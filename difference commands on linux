@@ -1,0 +1,15 @@
+Q how to compare a two files in linux??
+
+#diff ASML_LOGBOOK.TXT ASML_LOGBOOK_2.TXT > LOG1001.TXT
+
+Q) comm: This command is used to compare two sorted files.
+
+Syntax: comm [options] file1 file2
+One set of options allows selection of ‘columns’ to suppress.
+-1: suppress lines unique to file1 (column 1)
+-2: suppress lines unique to file2 (column 2)
+-3: suppress lines common to file1 and file2 (column3)
+Example: Only show column-3 that contains lines common between file1 and file2
+
+$ comm -12 file1 file2
+
